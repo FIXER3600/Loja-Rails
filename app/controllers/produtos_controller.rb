@@ -20,6 +20,7 @@ class ProdutosController < ApplicationController
   def destroy
     id= params[:id]
     Produto.destroy(id)
+    flash[:notice]="Produto deletado com sucesso!"
     redirect_to root_path
   end
   def busca
