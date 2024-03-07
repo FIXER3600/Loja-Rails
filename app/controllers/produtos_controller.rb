@@ -4,9 +4,17 @@ class ProdutosController < ApplicationController
     @produto_com_desconto=Produto.order(:preco).limit 1
   end
   def create
-    produto= params.require(:produto).permit(:nome,:descricao,:preco,:quantidade)
-    Produto.create produto
-    redirect_to root_path
+    values= params.require(:produto).permit(:nome,:descricao,:preco,:quantidade)
+    @produto=Produto.new values
+    if @produto.save
+      redirect_to root_url
+    else
+      render :new
+      end
+  end
+
+  def new
+    @produto = Produto.new
   end
   def destroy
     id= params[:id]
