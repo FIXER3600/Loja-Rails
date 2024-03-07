@@ -7,6 +7,7 @@ class ProdutosController < ApplicationController
     values= params.require(:produto).permit(:nome,:descricao,:preco,:quantidade)
     @produto=Produto.new values
     if @produto.save
+      flash[:notice]="Produto criado com sucesso!"
       redirect_to root_url
     else
       render :new
