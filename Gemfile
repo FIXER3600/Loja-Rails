@@ -6,6 +6,7 @@ ruby "3.2.2"
 gem "rails", "~> 7.1.2"
 gem "turbolinks"
 gem "jquery-rails"
+gem 'rails-i18n', '~> 7.0.0'
 gem "twitter-bootstrap-rails"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
