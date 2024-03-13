@@ -10,7 +10,7 @@
                 <td>Quantidade</td>
                 <td>Preço</td>
               <td>Departamento</td>
-              <td colspan="1"></td>
+              <td colspan="2"></td>
             </tr>
 
             <% @produtos.each do |produto| %>
@@ -22,6 +22,7 @@
               <td><%= produto.departamento.nome %></td>
               <td><%= button_to "Remover", produto, method: :delete, class:"btn btn-danger",
               data:{confirm:"Tem certa que deseja remover #{produto.nome}?"}%></td>
+              <td><%= link_to "Alterar", edit_produto_path(produto), class: "btn btn-default"%></td>
             </tr>
            <% end %>
         </thead>

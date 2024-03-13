@@ -43,5 +43,5 @@
       </div>
     </div>
   </div>
-   <%= form.submit "Criar", class:"btn btn-primary"%>
+   <%= form.submit @produto.nome != "" ? "Editar":"Criar", class:"btn btn-primary"%>
     <% end %>
