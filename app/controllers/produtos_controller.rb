@@ -4,7 +4,7 @@ class ProdutosController < ApplicationController
     @produto_com_desconto=Produto.order(:preco).limit 1
   end
   def create
-    values= params.require(:produto).permit(:nome,:descricao,:preco,:quantidade)
+    values= params.require(:produto).permit(:nome,:descricao,:preco,:quantidade,:departamento_id)
     @produto=Produto.new values
     if @produto.save
       flash[:notice]="Produto criado com sucesso!"
