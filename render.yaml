@@ -1,6 +1,6 @@
 databases:
   - name: lojatest
-    databaseName: loja_test
+    databaseName: lojaTest
     user: fixer3600
     plan: free
 
@@ -12,9 +12,9 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec rails server"
     envVars:
-      - key: acd85a5c747cff418b2f1fdd8a990aa0
+      - key: DATABASE_URL
         fromDatabase:
-          name: loja_test
+          name: lojaTest
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
