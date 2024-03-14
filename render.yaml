@@ -3,7 +3,6 @@ databases:
     databaseName: lojaTest
     user: fixer3600
     plan: free
-
 services:
   - type: web
     name: lojaTest
