@@ -6,7 +6,7 @@ databases:
 
 services:
   - type: web
-    name: loja-test
+    name: loja_test
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
