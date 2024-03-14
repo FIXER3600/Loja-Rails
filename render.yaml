@@ -1,12 +1,12 @@
 databases:
-  - name: lojatest
+  - name: lojaTest
     databaseName: lojaTest
     user: fixer3600
     plan: free
 
 services:
   - type: web
-    name: lojatest
+    name: lojaTest
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
