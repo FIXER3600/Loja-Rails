@@ -1,19 +1,18 @@
 databases:
-  - name: loja-test
+  - name: lojatest
     databaseName: loja_test
     user: fixer3600
     plan: free
 
 services:
   - type: web
-    name: loja_test
+    name: lojatest
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
-    # preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "bundle exec rails server"
     envVars:
-      - key: DATABASE_URL
+      - key: acd85a5c747cff418b2f1fdd8a990aa0
         fromDatabase:
           name: loja_test
           property: connectionString
